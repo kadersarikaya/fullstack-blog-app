@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -23,34 +24,37 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-12 ">
+      <div className="flex flex-col items-center justify-center mt-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full "
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
+          <Link href="/post/the-impact-of-technology-on-the-workplace-how-technology-is-changing"
+          >
+            <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
+              <Image 
+                src="/assets/image.png"
+                alt="Next.js Logo"
+                width={300}
+                height={300}
+                className="rounded-md w-full"
+              />
+              <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
+              Technology
+              </button>
+                <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
+                <div className="mt-3">
+                  <div className="flex items-center">
+                    <Image
+                      src="/assets/avatar.png"
+                      alt="Next.js Logo"
+                      width={20}
+                      height={20}
+                      className="rounded-full "
+                    />
+                      <p className="text-2xs ml-3">John Doe</p>
+                      <p className="text-2xs ml-4">Jan 1, 2021</p>
+                  </div>
                 </div>
-              </div>
-          </div>
+            </div>
+          </Link>
           <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
             <Image 
               src="/assets/image.png"

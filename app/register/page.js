@@ -1,11 +1,11 @@
 import React from "react";
 
-const login = () => {
+const Register = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center mt-10">
         <div className="border-2 rounded-md border-gray-50 shadow-lg bg-white p-4">
             <div className="flex justify-center items-center">
-                <h1 className="text-2xl font-semibold">Login</h1>
+                <h1 className="text-2xl font-semibold">Register</h1>
             </div>
             <div className="mt-4">
                 <div className="flex justify-center items-center">
@@ -16,7 +16,7 @@ const login = () => {
                 </div>
                 <div className="flex justify-center items-center mt-4">
                     <button className="bg-indigo-50 font-semibold text-indigo-700 rounded-md p-2 text-2xs inline-block w-80">
-                        Login
+                        Register
                     </button>
                 </div>
             </div>
@@ -25,4 +25,4 @@ const login = () => {
   )
 };
 
-export default login;
+export default Register;
