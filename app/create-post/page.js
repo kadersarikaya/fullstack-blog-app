@@ -1,7 +1,8 @@
 "use client";
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import 'react-quill/dist/quill.snow.css';
 import dynamic from "next/dynamic";
+import { ThemeContext } from "@/context/ThemeContext";
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const modules = {
@@ -23,10 +24,11 @@ const modules = {
 
 const CreatePost = () => {
   const [content, setContent] = useState('')
+  const { theme } = useContext(ThemeContext)
   return (
-    <div className="px-8 py-4">
+    <div className="px-8 py-4 ">
       <form className="flex flex-col space-y-4" >
-        <input className="border p-1" type="text" placeholder="Title" />
+        <input className={theme ==="dark" ? "border p-1 bg-[#1f2937]":"border p-1"} type="text" placeholder="Title" />
         <input 
         type="file" 
         placeholder="Image" 
@@ -34,12 +36,14 @@ const CreatePost = () => {
         className="border p-1"
         />
         <ReactQuill 
-        theme="snow"
+        className="h-96"
         onChange={setContent}
         value={content} modules={modules} formats={formats} />
+        <div className="">
           <button
-          className="justify-start bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md px-4 py-2 text-2xs inline-block"
+          className="justify-start bg-indigo-600 mt-10 font-semibold text-indigo-50 rounded-md px-4 py-2 inline-block"
           type="submit">Create Post</button>
+          </div>
       </form>
     </div>
   )

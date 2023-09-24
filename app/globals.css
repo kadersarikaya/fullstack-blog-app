@@ -3,3 +3,16 @@
 @tailwind utilities;
 
 
+.dark {
+    background-color: #1f2937;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+:root {
+    background-color: white;
+    color: black;
+}

@@ -1,196 +1,75 @@
+import CategoryList from '@/components/CategoryList'
 import Image from 'next/image'
-import Link from 'next/link'
+import CardList from '@/components/CardList'
+export default function Home({searchParams}) {
+  
+  const page = parseInt(searchParams.page) || 1;
 
-export default function Home() {
   return (
-    <main className="mt-8 px-7 lg:px-28">
-      <div className="">
-        <p className="text-sm">Search blog by topics</p>
-        <div className="flex flex-wrap items-center mt-2">
-          <button className="bg-indigo-600 mb-2 mr-2 text-white rounded-md p-1 text-2xs inline-block">
-            Technology
-          </button>
-          <button className="bg-indigo-600 mb-2 mr-2 text-white rounded-md p-1 text-2xs inline-block">
-            Technology
-          </button>
-          <button className="bg-indigo-600 mb-2 mr-2 text-white rounded-md p-1 text-2xs inline-block">
-            Technology
-          </button>
-          <button className="bg-indigo-600 mb-2 mr-2 text-white rounded-md p-1 text-2xs inline-block">
-            Technology
-          </button>
-          <button className="bg-indigo-600 mb-2 mr-2 text-white rounded-md p-1 text-2xs inline-block">
-            Technology
-          </button>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-center mt-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-          <Link href="/post/the-impact-of-technology-on-the-workplace-how-technology-is-changing"
-          >
-            <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-              <Image 
-                src="/assets/image.png"
-                alt="Next.js Logo"
-                width={300}
-                height={300}
-                className="rounded-md w-full"
-              />
-              <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-              Technology
+    <main className="mt-8 px-7 lg:px-32">
+      <div className="flex flex-col justify-center">
+        <div className="flex mt-10 mx-auto">
+          <Image src="/assets/image.png" width={700} height={700} />
+          <div className="flex flex-col">
+            <div className="mt-10 p-10 space-y-6">
+              <h1 className="text-3xl font-bold">Welcome to your blog</h1>
+            <p className="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+              <button className="w-auto border border-gray-200 text-gray-700 hover:bg-slate-100 bg-slate-50 rounded-md px-5 py-3 text-2xs inline-block my-12">
+                Read More
               </button>
-                <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-                <div className="mt-3">
-                  <div className="flex items-center">
-                    <Image
-                      src="/assets/avatar.png"
-                      alt="Next.js Logo"
-                      width={20}
-                      height={20}
-                      className="rounded-full "
-                    />
-                      <p className="text-2xs ml-3">John Doe</p>
-                      <p className="text-2xs ml-4">Jan 1, 2021</p>
-                  </div>
-                </div>
             </div>
-          </Link>
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
-                </div>
-              </div>
-          </div>
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
-                </div>
-              </div>
-          </div>
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
-                </div>
-              </div>
-          </div>
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
-                </div>
-              </div>
-          </div>
-          <div className="border-2 cursor-pointer rounded-md hover:border-gray-200 duration-100 border-gray-50 shadow-lg bg-white p-4">
-            <Image 
-              src="/assets/image.png"
-              alt="Next.js Logo"
-              width={300}
-              height={300}
-              className="rounded-md w-full"
-            />
-            <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-2xs inline-block">
-            Technology
-            </button>
-              <p className="mt-2 font-semibold text-lg leading-6">The Impact of Technology on the Workplace: How Technology is Changing</p>
-              <div className="mt-3">
-                <div className="flex items-center">
-                  <Image
-                    src="/assets/avatar.png"
-                    alt="Next.js Logo"
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                    <p className="text-2xs ml-3">John Doe</p>
-                    <p className="text-2xs ml-4">Jan 1, 2021</p>
-                </div>
-              </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center items-center">
-        <button className="w-auto border border-gray-200 text-gray-700 hover:bg-slate-100 bg-slate-50 rounded-md px-5 py-3 text-2xs inline-block my-12">
-          Load More
-        </button>
+        <div className="">
+          <h2 className="text-2xl font-bold my-8">Popular Categories</h2>
+            <CategoryList page={page} />
+        </div>
+        <div className="flex justify-between">
+          <CardList page={page} />
+          <div className="flex flex-col px-20 justify-center mt-6 w-1/3">
+            <div className="py-8">
+              <span>What's hot</span>
+              <h2 className="text-2xl font-semibold" >Most Popular</h2>
+            </div>
+            <div className="space-y-8">
+              <div className="">
+                <button className="rounded-3xl bg-orange-200 text-white px-3">Travel</button>
+                  <p className="font-semibold py-2 font-serif">A Journey Through Bohemian Beauty:
+                    The Best of Prague
+                  </p>
+                  <div className="flex text-sm">
+                    <p className="">Joseph Owen - </p>
+                    <p className="text-gray-400">10.08.2023</p>
+                  </div>
+              </div>
+              <div className="">
+                <button className="rounded-3xl bg-orange-200 text-white px-3">Travel</button>
+                  <p className="font-semibold py-2 font-serif">A Journey Through Bohemian Beauty:
+                    The Best of Prague
+                  </p>
+                  <div className="flex text-sm">
+                    <p className="">Joseph Owen - </p>
+                    <p className="text-gray-400">10.08.2023</p>
+                  </div>
+              </div>
+              <div className="">
+                <button className="rounded-3xl bg-orange-200 text-white px-3">Travel</button>
+                  <p className="font-semibold py-2 font-serif">A Journey Through Bohemian Beauty:
+                    The Best of Prague
+                  </p>
+                  <div className="flex text-sm">
+                    <p className="">Joseph Owen - </p>
+                    <p className="text-gray-400">10.08.2023</p>
+                  </div>
+              </div>
+            </div>
+             <div className="py-8 mt-5">
+              <span>Discover by topics</span>
+              <h2 className="text-2xl font-semibold pb-5" >Categories</h2>
+              <CategoryList />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
