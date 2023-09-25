@@ -35,7 +35,6 @@ const Comments = ({ postSlug }) => {
         });
         mutate();
         setDesc("");
-        
     };
     return (
         <div className="my-10">
@@ -54,8 +53,8 @@ const Comments = ({ postSlug }) => {
                         className="rounded-full"
                     />
                     )}
-                    <p className="text-2xs ml-3">{item.user.name}</p>
-                    <p className="text-2xs ml-4">{item.createdAt
+                    <p className="text-sm ml-3">{item.user.name}</p>
+                    <p className="text-sm ml-4">{item.createdAt
                         .slice(0, 10)
                     }</p>
                 </div>
@@ -74,7 +73,11 @@ const Comments = ({ postSlug }) => {
                 </button>
             </div>
             ) : (
-                <Link href="/login">Login to write a comment</Link>
+                <Link href="/login">
+                    <p className="mt-5 inline-block bg-red-50 text-sm font-semibold text-red-700 rounded-md p-2 ">
+                        Login to comment
+                    </p>
+                </Link>
             )}
         </div> 
     )

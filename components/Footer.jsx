@@ -2,16 +2,14 @@ import React from "react";
 import Image from "next/image";
 const Footer = () => {
   return(
-    <div className="flex mt-8 px-7 lg:px-32 justify-between py-16">
-      <div className="flex flex-col space-y-4 w-1/3">
+    <div className="md:flex mt-8 px-7 items-center lg:px-32 space-y-5 justify-between py-16">
+      <div className="flex flex-col  space-y-4 ">
         <div className="">
-          <Image/>      
           <button className="text-2xl font-mono font-bold">BLOGIFY.</button>
-        </div>
-        <p className="text-sm ">Lorem ipsum dolor sit amet
-         consectetur adipisicing elit. Quisquam, voluptatum.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-         </p>
+          <p>
+            Lorem ipsum dolor sit amet.
+          </p>
+        </div> 
 
       </div>
       <div className="flex space-x-8">
@@ -43,7 +41,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col space-y-4 w-1/3">
+      <div className="flex flex-col space-y-4 md:w-1/3">
         <p className="font-semibold">Subscribe</p>
         <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
         <div className="flex space-x-2">

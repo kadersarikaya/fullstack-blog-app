@@ -40,9 +40,6 @@ const Header = () => {
                       </svg>
                     </button>
                   </Link>
-                  <button className="mr-2">
-                    <img src="https://avatars.githubusercontent.com/u/55942632?v=4" className="w-10 h-10 rounded-full" />
-                  </button>
                   <button onClick={signOut}>Logout</button>
                 </>
               ) : (

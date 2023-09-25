@@ -22,7 +22,7 @@ const Post = async ({ params }) => {
   return (
     <div className="mt-8 px-7 lg:px-32 justify-center items-center ">
         <div className="flex flex-col space-y-5">
-            <h1 className="font-semibold text-3xl leading-6" >{data?.title}</h1>
+            <h1 className="font-semibold text-3xl leading-normal" >{data?.title}</h1>
             <div className="flex items-center">
                {data?.user?.image && (
                   <Image
@@ -34,11 +34,17 @@ const Post = async ({ params }) => {
                   />
                 )}
                 <p className="text-xs ml-3">{data?.user.name}</p>
-                <p className="text-xs ml-4">Jan 1, 2021</p>
+                <p className="text-xs ml-4">{
+                  new Date(data?.createdAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                }</p>
             </div>
             {data?.img && (
             <Image src={data.img} alt="Next.js Logo" 
-            width={1000} height={800}
+            width={500} height={500}
             className="rounded-md bg-cover bg-center" />
             )}
               <p className="text-lg leading-normal" dangerouslySetInnerHTML={{ __html: data?.desc }}/>
