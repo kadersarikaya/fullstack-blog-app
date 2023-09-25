@@ -26,7 +26,7 @@ const CreatePost = () => {
   const [content, setContent] = useState('')
   const { theme } = useContext(ThemeContext)
   return (
-    <div className="px-8 py-4 ">
+    <div className="py-4 mt-8 px-7 lg:px-32">
       <form className="flex flex-col space-y-4" >
         <input className={theme ==="dark" ? "border p-1 bg-[#1f2937]":"border p-1"} type="text" placeholder="Title" />
         <input 
