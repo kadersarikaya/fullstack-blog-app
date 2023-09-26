@@ -105,7 +105,7 @@ const CreatePost = () => {
         desc: value,
         img: media,
         slug: slugify(title),
-        catSlug: catSlug //If not selected, choose the general category
+        catSlug: catSlug || "react",
       }),
     });
 
@@ -136,6 +136,7 @@ const CreatePost = () => {
           <option value="frontend">frontend</option>
           <option value="economics">economics</option>
           <option value="data science">data science</option>
+          <option value="data science">style</option>
         </select>
         <ReactQuill 
         placeholder="Write something amazing..."

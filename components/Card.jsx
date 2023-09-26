@@ -13,10 +13,10 @@ const Card = ({ key, item }) => {
                 alt="Next.js Logo"
                 width={200}
                 height={200}
-                className="rounded-md "
+                className="rounded-md bg-cover  object-cover "
             />
         )}
-        <div className="ml-2">
+        <div className="ml-4">
             <button className="bg-indigo-50 mt-2 font-semibold text-indigo-700 rounded-md p-1 text-xs inline-block">
                     {item.catSlug}
             </button>
